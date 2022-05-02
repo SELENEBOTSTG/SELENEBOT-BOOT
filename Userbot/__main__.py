@@ -9,13 +9,13 @@ from telethon import Button, TelegramClient, custom, events
 from userbot.Config import Config
 from userbot.start import abuses, addons, assistants, hekp, install, module, spams
 
-from . import LOGS, LEGENDversion, bot
+from . import LOGS, SELENEversion, bot
 
 l1 = Config.HANDLER
 l2 = Config.SUDO_HANDLER
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+SELENE_PIC = "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
 
-perf = "[ Pro DЯΛGӨПBӨƬ ]"
+perf = "[ SELENEUSERBӨƬ ]"
 
 onbot = "start - Check if I am Alive \nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -34,7 +34,7 @@ async def add_bot(bot_token):
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
     except Exception as e:
-        LOGS.error(f"DRAGON_STRING - {str(e)}")
+        LOGS.error(f"SELENE_STRING - {str(e)}")
         sys.exit()
 
 
@@ -49,9 +49,9 @@ else:
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
-            LOGS.info("♥️ Starting PRO-DЯΛGӨПBӨƬ ♥️")
+            LOGS.info("♥️ Starting SELENEUSERBӨƬ ♥️")
             bot.loop.run_until_complete(add_bot(Config.BOT_USERNAME))
-            LOGS.info("🥇🔥 PRO-DЯΛGӨПBӨƬ Startup Completed 🔥🥇")
+            LOGS.info("🥇🔥 SELENEUSERBӨƬ Startup Completed 🔥🥇")
         else:
             bot.start()
     except Exception as e:
@@ -64,9 +64,9 @@ tgbot = bot.tgbot
 
 
 async def killer():
-    LEGEND_USER = bot.me.first_name
-    Pro_Legend = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={Pro_Legend})"
+    SELENE_USER = bot.me.first_name
+    Selene = bot.uid
+    legd_mention = f"[{SELENE_USER}](tg://user?id={Selene})"
     name = f"{legd_mention}'s Assistant"
     description = (
         f"I am Assistant Of {legd_mention}.This Bot Can Help U To Chat With My Master"
@@ -114,14 +114,14 @@ async def killer():
 
 
 async def legends():
-    LEGEND_USER = bot.me.first_name
-    Pro_Legend = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={Pro_Legend})"
-    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully PRO-DЯΛGӨПBӨƬ Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
+    SELENE_USER = bot.me.first_name
+    Selene = bot.uid
+    legd_mention = f"[{SELENE_USER}](tg://user?id={Selene})"
+    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully SELENEUSRBOT Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {SELENEversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await tgbot.send_file(
-            bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY, incoming=True
+            bot.me.id, SELENE_PIC, caption=yescaption, buttons=TRY, incoming=True
         )
     except:
         pass
@@ -138,8 +138,8 @@ async def help(event):
             message=f"Hey Sir It's Me {bot_id}, Your Assistant! How Can I Help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/DragonPro_UserBot"),
-                    Button.url(" Updates ", "https://t.me/DragonPro_UserBot"),
+                    Button.url(" Support ", "https://t.me/SELENEBOT SUPPORTS"),
+                    Button.url(" Updates ", "https://t.me/SELENE USERBOT"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -194,7 +194,7 @@ async def help(event):
 async def rel(event):
     if event.query.user_id == bot.uid:
         await event.answer(
-            "Reloading DЯΛGӨПBӨƬ... Wait for few seconds...", cache_time=0, alert=True
+            "Reloading SELENE USERBOT... Wait for few seconds...", cache_time=0, alert=True
         )
         await reload_DRAGONBOT()
     else:
@@ -228,7 +228,7 @@ async def users(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message=".set var <varname> <value> ex:- .set var ALIVE_NAME LegendPro \n\n To Know All Var Go Back And Click On All Var",
+            message=".set var <varname> <value> ex:- .set var ALIVE_NAME SELENE USERBOT \n\n To Know All Var Go Back And Click On All Var",
             buttons=[
                 [custom.Button.inline("Back", data="osg")],
             ],
@@ -243,7 +243,7 @@ async def users(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : PRO-DЯΛGӨПBӨƬ Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
+            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : SELENE USERBOT Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
             buttons=[
                 [custom.Button.inline("Back", data="osg")],
             ],
@@ -353,16 +353,16 @@ print(
     f"""
 ╔════❰PRO-DЯΛGӨПBӨƬ❱═❍⊱❁۪۪
 ║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @DragonPro_UserBot
-║┣⪼ CREATOR - @Drak_Legend_Pro
-║┣⪼ PRO-DЯΛGӨПBӨƬ - {LEGENDversion}
-║┣⪼ ✨ 『🔱DЯΛGӨПBӨƬ 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ Group - @SELENE_USERBOT
+║┣⪼ CREATOR - @SELENEBOT_SUPPORTS
+║┣⪼ SELENE USERBOT - {SELENEversion}
+║┣⪼ ✨ 『🔱SELENE USERBOT 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
-bot.loop.run_until_complete(legends())
+bot.loop.run_until_complete(selene())
 
 
 if len(sys.argv) not in (1, 3, 4):
