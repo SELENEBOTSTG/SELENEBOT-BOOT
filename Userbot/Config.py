@@ -57,25 +57,25 @@ if ENV:
         ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", None) or "✥"
         ALIVE_PIC = (
             os.environ.get("ALIVE_PIC", None)
-            or "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+            or "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
         )
         PM_PIC = (
             os.environ.get("PM_PIC", None)
-            or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+            or "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
         )
         AWAKE_PIC = (
             os.environ.get("AWAKE_PIC", None)
-            or "https://telegra.ph/file/47ffec836544b371408ab.mp4"
+            or "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
         )
         HELP_PIC = (
             os.environ.get("HELP_PIC", None)
-            or "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+            or "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
         )
         PING_PIC = (
             os.environ.get("PING_PIC", None)
-            or "https://te.legra.ph/file/ace5feae5b1ac8ea262ed.jpg"
+            or "https://te.legra.ph/file/476867b219dc3105c16e6.jpg"
         )
-        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "Dragonẞøt Is Online"
+        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "SELENEẞøt Is Online"
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "OFF")
         YOUR_GROUP = os.environ.get("YOUR_GROUP", "@DragonPro_UserBot")
@@ -88,11 +88,11 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API", None)
         PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/DRAK-LEGEND-PRO/PRO-DRAGONSETUP"
+            "UPSTREAM_REPO", "https://github.com/SELENEBOTSTG/SELENEBOTSDEPLOYEP"
         )
         APP_ID = os.environ.get("APP_ID", None)
         API_HASH = os.environ.get("API_HASH", None)
-        DRAGON_STRING = os.environ.get("DRAGON_STRING", None)
+        SELENE_STRING = os.environ.get("DRAGON_STRING", None)
         EXTRA_PLUGIN = os.environ.get("EXTRA_PLUGIN", None)
         ASSISTANT = os.environ.get("ASSISTANT", None)
         ABUSE = os.environ.get("ABUSE", None)
@@ -134,7 +134,7 @@ if ENV:
             "TMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/"
         )
         TELEGRAPH_SHORT_NAME = (
-            os.environ.get("TELEGRAPH_SHORT_NAME", None) or "PRO-DRAGONROBOOT"
+            os.environ.get("TELEGRAPH_SHORT_NAME", None) or "SELENEẞøt"
         )
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         # MIRROR ACE API KEY AND TOKEN
