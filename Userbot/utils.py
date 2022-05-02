@@ -17,7 +17,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, DRAGON, SUDO_LIST, Legend, bot
+from userbot import CMD_LIST, LOAD_PLUG, LOGS, SELENE, SUDO_LIST, Selene, bot
 from userbot.Config import Config
 from userbot.helpers.exceptions import CancelProcess
 from var import Var
@@ -42,7 +42,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("⚡DЯΛGӨПBӨƬ⚡ ~ " + shortname)
+        LOGS.info("⚡SELENEBӨƬ⚡ ~ " + shortname)
     else:
         import userbot.utils
 
@@ -50,11 +50,11 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
+        mod.bot = Selene
         mod.borg = bot
-        mod.DRAGON = DRAGON
-        mod.tbot = DRAGON
-        mod.Legend = Legend
+        mod.SELENE = SELENE
+        mod.tbot = SELENE
+        mod.Selene = Selene
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -63,20 +63,20 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_SELENE = delete_SELENE
+        mod.eod = delete_SELENE
         mod.admin_cmd = admin_cmd
-        mod.legend_cmd = admin_cmd
+        mod.selene_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for PRO-LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        # support for SELENEBOT originals
+        sys.modules["SELENEBOT.utils"] = userbot.utils
+        sys.modules["SELENEBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡DЯΛGӨПBӨƬ⚡🔥 ~ " + shortname)
+        LOGS.info("🔥⚡SELENEBӨƬ⚡🔥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -158,27 +158,27 @@ def load_addons(shortname):
         name = "userbot.plugins.Xtra_Plugin.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.Legend = Legend
-        mod.bot = Legend
+        mod.Selene = Selene
+        mod.bot = Selene
         mod.bot = bot
         mod.borg = bot
-        mod.DRAGON = DRAGON
-        mod.tbot = DRAGON
-        mod.Legend = Legend
+        mod.SELENE= SELENE
+        mod.tbot = SELENE
+        mod.Selene = Selene
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_SELENE = delete_SELENE
+        mod.eod = delete_SELENE
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
-        # support for PRO-LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for SELENEBOT originals
+        sys.modules["SELENEBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
@@ -203,7 +203,7 @@ def load_abuse(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("PRO-LEGENDBOT-Abuse ~ " + shortname)
+        LOGS.info("SELENEBOT-Abuse ~ " + shortname)
     else:
         import importlib
         import sys
@@ -215,10 +215,10 @@ def load_abuse(shortname):
         name = "userbot.plugins.Abuse.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
-        mod.DRAGON = DRAGON
-        mod.tbot = DRAGON
-        mod.Legend = Legend
+        mod.bot = Selene
+        mod.SELENE = SELENE
+        mod.tbot = SELENE
+        mod.Selene = Selene
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -227,19 +227,19 @@ def load_abuse(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.DRAGON = bot
+        mod.SELENE = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_SELENE = delete_SELENE
+        mod.eod = delete_SELENE
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        sys.modules["SELENEBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Abuse." + shortname] = mod
-        LOGS.info("🔱PRO-DЯΛGӨПBӨƬ-Abuse🔱 ~ " + shortname)
+        LOGS.info("🔱SELENEBӨƬ-Abuse🔱 ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -299,12 +299,12 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.HANDLER) == 2:
-                LEGENDreg = "^" + Config.HANDLER
+                SELENEreg = "^" + Config.HANDLER
                 reg = Config.HANDLER[1]
             elif len(Config.HANDLER) == 1:
-                LEGENDreg = "^\\" + Config.HANDLER
+                SELENEreg = "^\\" + Config.HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(LEGENDreg + pattern)
+            args["pattern"] = re.compile(SELENEreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -432,10 +432,10 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_HANDLER) == 2:
-                LEGENDreg = "^" + Config.SUDO_HANDLER
+                SELENEreg = "^" + Config.SUDO_HANDLER
                 reg = Config.SUDO_HANDLER[1]
             elif len(Config.SUDO_HANDLER) == 1:
-                LEGENDreg = "^\\" + Config.SUDO_HANDLER
+                SELENEreg = "^\\" + Config.SUDO_HANDLER
                 reg = Config.HANDLER
             args["pattern"] = re.compile(LEGENDreg + pattern)
             if command is not None:
@@ -610,7 +610,7 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        LEGENDevent = (
+        SELENEevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
@@ -618,11 +618,11 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        LEGENDevent = await event.edit(
+        SELENEevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await LEGENDevent.delete()
+    return await SELENEevent.delete()
 
 
 def on(**args):
@@ -648,7 +648,7 @@ def errors_handler(func):
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
-            link = "[here](https://t.me/Pro_LegendBoy)"
+            link = "[here](https://t.me/MRINVISIBLE_OFFICIAL)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
