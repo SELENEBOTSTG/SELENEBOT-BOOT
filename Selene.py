@@ -7,13 +7,13 @@ from userbot.Config import Config
 
 try:
     from userbot import bot
-except:
+except: 
     pass
 
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("BOT_TOKEN", None)
-lnbot = TelegramClient("legendpro", API_ID, API_HASH).start(bot_token=token)
+lnbot = TelegramClient("Rohit_x_Op", API_ID, API_HASH).start(bot_token=token)
 
 
 class LegendPro(TelegramClient):
@@ -46,9 +46,9 @@ Your heroku bot username is {self.heroku_username}"""
         return detail
 
 
-if Config.DRAGON_STRING:
-    session_name = str(Config.DRAGON_STRING)
-    sweetie = LegendPro(session_name, Config.APP_ID, Config.API_HASH)
+if Config.SELENE_STRING:
+    session_name = str(Config.SELENE_STRING)
+    sweetie = Rohit_x_Op(session_name, Config.APP_ID, Config.API_HASH)
 else:
     session_name = "startup"
     bbbot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
