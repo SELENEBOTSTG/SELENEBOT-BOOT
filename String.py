@@ -15,8 +15,8 @@ if okvai == "69":
         client.send_message("me", client.session.save())
         client.send_message(
             "me",
-            "Above is your #PRO-DRAGONROBOOT STRING SESSION \nPaste this string in Heroku Var.\n\n[Team PRO-DRAGONROBOOT](t.me/DragonPro_UserBot)",
+            "Above is your #PRO-SELEENERBOOT STRING SESSION \nPaste this string in Heroku Var.\n\n[Team SELEENERBOOT](t.me/Rohit_x_Op)",
         )
 
 else:
-    print("Bhag jaa bhosdike warna")
+    print("ITNI GAAND MAREGA HUMRA ROHIT BHAI ")
